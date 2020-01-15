@@ -10,7 +10,7 @@ import { Category } from './category';
 export class ApiService {
 
   //private apiUrl = 'http://luuddshoeshop.herokuapp.com/api/';
-  private localapiUrl = 'http://localhost:8080/api/';
+  //private apiUrl = 'http://localhost:8080/api/';
   private apiUrl = 'https://luuddshoeshop.herokuapp.com/api/';
   private uploadImageApi = 'https://api.imgur.com/3/image';
   constructor(private http: HttpClient) { }
@@ -27,21 +27,21 @@ export class ApiService {
   };
 
   getProducts(): Observable<IProduct[]> {
-    return this.http.get<IProduct[]>(this.localapiUrl + 'products');
+    return this.http.get<IProduct[]>(this.apiUrl + 'products');
   }
 
   updateProduct(data: IProduct, productId: any): Observable<IProduct> {
     console.log(' product data: ', data );
     console.log(' product id: ', productId);
-    return this.http.put<IProduct>(this.localapiUrl + 'product/' + productId , data, this.httpHeader);
+    return this.http.put<IProduct>(this.apiUrl + 'product/' + productId , data, this.httpHeader);
   }
 
   createProduct(data: IProduct): Observable<IProduct> {
-    return this.http.post<IProduct>(this.localapiUrl + 'products', data, this.httpHeader);
+    return this.http.post<IProduct>(this.apiUrl + 'products', data, this.httpHeader);
   }
 
   getProductById(productId: number): Observable<IProduct> {
-    return this.http.get<IProduct>(this.localapiUrl + 'products/' + productId);
+    return this.http.get<IProduct>(this.apiUrl + 'products/' + productId);
   }
 
   uploadImageFunction(file: File): Observable<any> {
@@ -54,17 +54,17 @@ export class ApiService {
 
   getAllCategories(): Observable<Category[]> {
     //console.log(this.localapiUrl + 'category');
-    return this.http.get<Category[]>(this.localapiUrl + 'category');
+    return this.http.get<Category[]>(this.apiUrl + 'category');
   }
 
   getCategoryById(categoryId: number): Observable<Category> {
-    console.log(this.localapiUrl + 'category/' + categoryId );
-    return this.http.get<Category>(this.localapiUrl + 'category/' + categoryId);
+    console.log(this.apiUrl + 'category/' + categoryId );
+    return this.http.get<Category>(this.apiUrl + 'category/' + categoryId);
   }
 
   deleteProductById(productId: number): Observable<IProduct> {
-    console.log(this.localapiUrl + 'product/' + productId);
-    return this.http.delete<IProduct>(this.localapiUrl + 'product/' + productId);
+    console.log(this.apiUrl+ 'product/' + productId);
+    return this.http.delete<IProduct>(this.apiUrl + 'product/' + productId);
   }
 
 }
