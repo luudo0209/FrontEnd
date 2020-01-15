@@ -20,6 +20,13 @@ export class AppComponent {
       autohide: true,
     });
   }
+  deleteSuccess() {
+    this.toastService.show('Delete product successfully!', {
+      classname: 'bg-success text-light',
+      delay: 2000 ,
+      autohide: true,
+    });
+  }
   showSuccess() {
     this.toastService.show('Create product successfully!', {
       classname: 'bg-success text-light',

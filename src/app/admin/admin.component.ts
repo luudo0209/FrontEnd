@@ -5,6 +5,7 @@ import { IProduct } from '../IProduct';
 import { Category } from '../category';
 import { AppComponent } from 'src/app/app.component';
 import { Router } from '@angular/router';
+import { toUnicode } from 'punycode';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -56,6 +57,7 @@ export class AdminComponent implements OnInit {
         console.log('Data delete: ', data);
         return this.confirmDelete = data;
       });
+      this.toast.deleteSuccess();
     } else {
       alert("Ban chua xoa san pham");
     }
