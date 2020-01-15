@@ -1,8 +1,8 @@
-$(function () {
-    changeUiHomePage();
-    carousel();
-    render();
-})
+// $(function () {
+//     changeUiHomePage();
+//     carousel();
+//     render();
+// })
 
 
 function changeUiHomePage() {
@@ -32,7 +32,7 @@ function changeUiHomePage() {
     }
 }
 
-$(window).resize(changeUiHomePage);
+// $(window).resize(changeUiHomePage);
 
 function render() {
     // Render best seller

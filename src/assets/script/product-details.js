@@ -1,13 +1,13 @@
-$(function () {
-    caroselProductImage();
-    imageZoom();
-    instafeed();
-    render();
-    activeSize();
-    sizeGuideRender();
-    changeUi();
-    relatedProductRender()
-});
+// $(function () {
+//     caroselProductImage();
+//     imageZoom();
+//     instafeed();
+//     render();
+//     activeSize();
+//     sizeGuideRender();
+//     changeUi();
+//     relatedProductRender()
+// });
 
 function caroselProductImage() {
     $('.slider-for').slick({

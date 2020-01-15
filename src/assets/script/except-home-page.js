@@ -1,4 +1,4 @@
-$(window).resize(changeUiShopPage);
+//$(window).resize(changeUiShopPage);
 
 function priceInputValidate(e) {
     let event = e || window.event;
@@ -9,9 +9,9 @@ function priceInputValidate(e) {
     return true;
 }
 
-$(function () {
-    changeUiShopPage();
-})
+// $(function () {
+//     changeUiShopPage();
+// })
 
 function changeUiShopPage() {
     let searchBar = $('.search-form');
@@ -33,5 +33,5 @@ function changeUiShopPage() {
         $('.search-form').remove();
         $(searchBar).insertAfter('.navbar-brand');
     }
-    
+
 }

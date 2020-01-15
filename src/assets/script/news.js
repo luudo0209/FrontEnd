@@ -1,9 +1,9 @@
-$(window).resize(changeUi);
+//$(window).resize(changeUi);
 
-$(function () {
-  changeUi();
-  pagination();
-});
+// $(function () {
+//   changeUi();
+//   pagination();
+// });
 
 function changeUi() {
   $(".nav-link#news").addClass('active-nav');

@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
-import { IProduct } from "src/app/IProduct";
+import { IProduct } from 'src/app/IProduct';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  selector: 'app-cart',
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.css']
 })
-export class ProductsComponent implements OnInit {
+export class CartComponent implements OnInit {
+
   headers: string[];
   products: IProduct[];
   constructor(private api: ApiService) { }
@@ -18,8 +19,5 @@ export class ProductsComponent implements OnInit {
       return this.products = data;
     });
   }
-  // this.vehicleService.getAll().subscribe( (data: VehicleModel[]) => {
-  //   // console.log(data);
-  //   return this.vehicles = data;
-  // });
+
 }
